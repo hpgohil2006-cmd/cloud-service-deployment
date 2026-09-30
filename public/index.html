@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Information Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Student Information System</h1>
+            <p>Cloud-Based Student Management Application</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Add Student Section -->
+        <section class="card">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course" required>
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                        <option value="B.Tech Computer Engineering">
+                            B.Tech Computer Engineering
+                        </option>
+
+                        <option value="B.Tech Computer Science">
+                            B.Tech Computer Science
+                        </option>
+
+                        <option value="BCA">
+                            BCA
+                        </option>
+
+                        <option value="MCA">
+                            MCA
+                        </option>
+
+                    </select>
+                </div>
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+        </section>
+
+
+        <!-- Student List -->
+        <section class="card">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Student Records</h2>
+
+                    <p>
+                        Total Students:
+                        <strong id="studentCount">0</strong>
+                    </p>
+                </div>
+
+                <button
+                    class="refresh-btn"
+                    onclick="loadStudents()"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+            <div id="loading">
+                Loading students...
+            </div>
+
+            <div id="studentList"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Cloud Service Deployment ALA |
+            Node.js + Express + SQLite
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
